@@ -31,13 +31,12 @@ inputPrice.style.color = "#54E346";
 
 //FOCUS AND UNFOCUS LOGIC
 inputPrice.onfocus = () => {
-  inputPrice.value = "";
   invalidInput.remove();
   input.style.background = "#28FFBF";
 };
 inputPrice.onblur = () => {
   input.style.background = "";
-  if (inputPrice.value < 0 || inputPrice.value == "") {
+  if (inputPrice.value < 0 || inputPrice.value == "" || isNaN(inputPrice.value)) {
     input.style.background = "red";
     input.appendChild(invalidInput);
     invalidInput.innerHTML = `<span>Please enter correct price</span>`;

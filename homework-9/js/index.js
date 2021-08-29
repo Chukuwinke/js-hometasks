@@ -1,5 +1,7 @@
 const tabLink = document.querySelectorAll(".tabs-title");
 const tabContent = document.querySelectorAll(".tabs-content li");
+const tabs = document.querySelector('.tabs');
+
 
 //HIDE OTHER INACTIVE CONTENT 
 tabLink.forEach((e) => {
@@ -9,10 +11,7 @@ tabLink.forEach((e) => {
   }
 });
 
-const tabSwitcher = (evnt, tab) => {
-  console.log(tab);
-  console.log(evnt);
-
+const tabSwitcher = (target) => {
   tabLink.forEach((element) => {
     element.className = element.className.replace(" active", "");
   });
@@ -21,7 +20,14 @@ const tabSwitcher = (evnt, tab) => {
     item.style.display = "none";
   });
 
-  document.getElementById(tab.getAttribute("data-tab-link")).style.display =
+  document.getElementById(target.getAttribute("data-tab-link")).style.display =
     "block";
-  evnt.currentTarget.className += " active";
-};
+  target.className += " active";
+}
+
+tabs.onclick = (event) => {
+  let target = event.target;
+
+  if(target.className != 'tabs-title') return;
+  tabSwitcher(target);
+}
