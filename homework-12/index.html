@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Banners</title>
+    <style>
+      .image-to-show {
+        width: 400px;
+        height: 400px;
+      }
+
+      .images-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="images-wrapper">
+      <img src="./img/slider_image_first.jpg" alt="image of game" class="image-to-show " />
+      <img src="./img/slider_image_second.jpg" alt="image of game" class="image-to-show" />
+      <img src="./img/slider_image_third.jpg" alt="image of game" class="image-to-show" />
+      <img src="./img/slider_image_fourth.png" alt="image of game" class="image-to-show" />
+    </div>
+    <button id="stop">stop</button>
+    <button id ="resume">resume</button>
+    
+    <script src="./js/index.js"></script>
+  </body>
+</html>

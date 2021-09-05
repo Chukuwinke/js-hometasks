@@ -1,0 +1,24 @@
+body{
+    background-color: #222831;
+}
+
+.header-text-logo a{
+    color: white;
+}
+.header-text-logo a > span{
+    color: #a621f3;
+}
+.image-container{
+    background-color: white;
+    border: 1px solid #ccc;
+}
+.aside-menu-container{
+    border: 1px solid #ccc;
+}
+.aside-menu-item > a, .lead-paragraph, .bottom-paragraph{
+    color: white;
+}
+.footer {
+    background-color: white;
+}
+
